@@ -26,13 +26,6 @@
     // The view controller
     self.viewController = [[ViewController alloc] init];
     
-    // The view
-    UIView *colorView = [[UIView alloc] initWithFrame:viewRect];
-    // Set the backgound color of the view
-    colorView.backgroundColor = [UIColor blueColor];
-    
-    self.viewController.view = colorView;
-    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     NSLog(@"The screen is %f wide and %f tall", viewRect.size.width, viewRect.size.height);
