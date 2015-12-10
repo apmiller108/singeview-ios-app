@@ -24,16 +24,16 @@
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
     
     // The view controller
-    UIViewController *colorTouchVC = [[UIViewController alloc] init];
+    self.viewController = [[ViewController alloc] init];
     
     // The view
     UIView *colorView = [[UIView alloc] initWithFrame:viewRect];
     // Set the backgound color of the view
     colorView.backgroundColor = [UIColor blueColor];
     
-    colorTouchVC.view = colorView;
+    self.viewController.view = colorView;
     
-    self.window.rootViewController = colorTouchVC;
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     NSLog(@"The screen is %f wide and %f tall", viewRect.size.width, viewRect.size.height);
     
