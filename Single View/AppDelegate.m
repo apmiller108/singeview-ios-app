@@ -25,9 +25,9 @@
     
     // The view controller
     self.viewController = [[ViewController alloc] init];
-    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
     NSLog(@"The screen is %f wide and %f tall", viewRect.size.width, viewRect.size.height);
     
     NSLog(@"Hello World, %@", self);
