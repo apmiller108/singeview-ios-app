@@ -24,9 +24,24 @@
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
     
     // The view controller
-    self.viewController = [[ViewController alloc] init];
-    self.window.rootViewController = self.viewController;
+    // self.viewController = [[ViewController alloc] init];
+    // self.window.rootViewController = self.viewController;
+    // [self.window makeKeyAndVisible];
+    
+    // Feedview controller
+    UIViewController *feedViewController = [[UIViewController alloc] init];
+    feedViewController.title = @"Feed Me";
+    feedViewController.view.backgroundColor = [UIColor blueColor];
+    // Favorites controller
+    UIViewController *favoritesViewController = [[UIViewController alloc] init];
+    favoritesViewController.title = @"Favorites";
+    favoritesViewController.view.backgroundColor = [UIColor redColor];
+    
+    // The tab bar controller
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
+    [tabBarController setViewControllers:@[feedViewController, favoritesViewController]];
     
     NSLog(@"The screen is %f wide and %f tall", viewRect.size.width, viewRect.size.height);
     
