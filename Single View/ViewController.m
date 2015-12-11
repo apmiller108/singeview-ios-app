@@ -32,23 +32,23 @@
     
     // Create the firstButton
     UIButton *firstButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    firstButton.frame = CGRectMake(150, 150, 100, 40);
+    firstButton.frame = CGRectMake(160, 150, 100, 40);
     firstButton.backgroundColor = [UIColor whiteColor];
     firstButton.layer.cornerRadius = 4;
     firstButton.layer.borderWidth = 1;
     firstButton.layer.borderColor = [UIColor grayColor].CGColor;
-    [firstButton setTitle:@"Click This!" forState:UIControlStateNormal];
+    [firstButton setTitle:@"Dim 50%" forState:UIControlStateNormal];
     // Add the firstButton button to the view as a subview
     [self.view addSubview:firstButton];
     
     // Create the secondButton
     UIButton *secondButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    secondButton.frame = CGRectMake(140, 250, 120, 40);
+    secondButton.frame = CGRectMake(160, 250, 100, 40);
     secondButton.backgroundColor = [UIColor whiteColor];
     secondButton.layer.cornerRadius = 4;
     secondButton.layer.borderWidth = 1;
     secondButton.layer.borderColor = [UIColor grayColor].CGColor;
-    [secondButton setTitle:@"Click This Too!" forState:UIControlStateNormal];
+    [secondButton setTitle:@"Dim 25%" forState:UIControlStateNormal];
     // Add the secondButton button to the view as a subview
     [self.view addSubview:secondButton];
     
@@ -63,7 +63,7 @@
 - (void)buttonPressed:(UIButton *)sender {
     // Console log a message when the button is pressed and radmonly change the screen transparency
     NSLog(@"The button was pressed, sender %@", sender);
-    if([sender.titleLabel.text isEqualToString:@"Click This Too!"]) {
+    if([sender.titleLabel.text isEqualToString:@"Dim 50%"]) {
         self.view.alpha = .5;
     }else {
         self.view.alpha = .75;
