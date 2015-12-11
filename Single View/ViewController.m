@@ -18,11 +18,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     // Set the backgound color of the view
+    
+    CGRect viewRect = [[UIScreen mainScreen] bounds];
+    
     self.view.backgroundColor = [UIColor yellowColor];
     
     // Create a label
-    UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 400, 44)];
+    UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, viewRect.size.width, 44)];
     firstLabel.text = @"It doesn't do much, but it works!";
+    firstLabel.textAlignment = NSTextAlignmentCenter;
     // Add the label to the view as a subview
     [self.view addSubview:firstLabel];
     
