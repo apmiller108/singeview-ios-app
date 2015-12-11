@@ -18,7 +18,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     // Set the backgound color of the view
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    // create the button
+    UIButton *firstButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    firstButton.frame = CGRectMake(150, 150, 100, 44);
+    firstButton.backgroundColor = [UIColor whiteColor];
+    [firstButton setTitle:@"It's a Button!" forState:UIControlStateNormal];
+    // add the button to the view as a subview
+    [self.view addSubview:firstButton];
+    
 }
 
 - (void)loadView {
