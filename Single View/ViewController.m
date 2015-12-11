@@ -27,16 +27,25 @@
     firstButton.layer.cornerRadius = 4;
     firstButton.layer.borderWidth = 1;
     firstButton.layer.borderColor = [UIColor grayColor].CGColor;
-    [firstButton setTitle:@"It's a Button!" forState:UIControlStateNormal];
+    [firstButton setTitle:@"Click This!" forState:UIControlStateNormal];
     // Add the button to the view as a subview
     [self.view addSubview:firstButton];
     
     // Create a label
-    UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 100, 200, 44)];
-    firstLabel.text = @"It's a Label!";
+    UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 400, 44)];
+    firstLabel.text = @"It doesn't do much, but it works!";
     // Add the label to the view as a subview
     [self.view addSubview:firstLabel];
     
+    // button press
+    [firstButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+- (void)buttonPressed:(UIButton *)sender {
+    // Console log a message when the button is pressed and radmonly change the screen transparency
+    NSLog(@"The button was pressed, sender %@", sender);
+    self.view.alpha = ((double)arc4random() / 0x100000000);
 }
 
 - (void)loadView {
