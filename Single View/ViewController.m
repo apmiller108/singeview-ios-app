@@ -39,7 +39,7 @@
     
     // Create the secondButton
     UIButton *secondButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    secondButton.frame = CGRectMake(140, 300, 120, 40);
+    secondButton.frame = CGRectMake(140, 250, 120, 40);
     secondButton.backgroundColor = [UIColor whiteColor];
     secondButton.layer.cornerRadius = 4;
     secondButton.layer.borderWidth = 1;
@@ -59,7 +59,11 @@
 - (void)buttonPressed:(UIButton *)sender {
     // Console log a message when the button is pressed and radmonly change the screen transparency
     NSLog(@"The button was pressed, sender %@", sender);
-    self.view.alpha = ((double)arc4random() / 0x100000000);
+    if([sender.titleLabel.text isEqualToString:@"Click This Too!"]) {
+        self.view.alpha = .5;
+    }else {
+        self.view.alpha = .75;
+    }
 }
 
 - (void)loadView {
