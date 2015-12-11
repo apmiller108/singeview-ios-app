@@ -20,13 +20,19 @@
     // Set the backgound color of the view
     self.view.backgroundColor = [UIColor yellowColor];
     
-    // create the button
+    // Create the button
     UIButton *firstButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     firstButton.frame = CGRectMake(150, 150, 100, 44);
     firstButton.backgroundColor = [UIColor whiteColor];
     [firstButton setTitle:@"It's a Button!" forState:UIControlStateNormal];
-    // add the button to the view as a subview
+    // Add the button to the view as a subview
     [self.view addSubview:firstButton];
+    
+    // Create a label
+    UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 100, 200, 44)];
+    firstLabel.text = @"It's a Label!";
+    // Add the label to the view as a subview
+    [self.view addSubview:firstLabel];
     
 }
 
