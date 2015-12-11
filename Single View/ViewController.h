@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) UIButton *resetButton;
+
 - (void)buttonPressed:(UIButton *)sender;
 
 

@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+
 @end
 
 @implementation ViewController
@@ -30,7 +31,7 @@
     // Add the label to the view as a subview
     [self.view addSubview:firstLabel];
     
-    // Create the firstButton
+    // Create the self.fiftyPercentButton
     UIButton *firstButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     firstButton.frame = CGRectMake(160, 150, 100, 40);
     firstButton.backgroundColor = [UIColor whiteColor];
@@ -51,6 +52,12 @@
     [secondButton setTitle:@"Dim 25%" forState:UIControlStateNormal];
     // Add the secondButton button to the view as a subview
     [self.view addSubview:secondButton];
+    
+    self.resetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.resetButton.frame = CGRectMake(160, 350, 100, 40);
+    self.resetButton.backgroundColor = [UIColor whiteColor];
+    [self.resetButton setTitle:@"Reset" forState:UIControlStateNormal];
+    [self.view addSubview:self.resetButton];
     
     // firstButton press
     [firstButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
