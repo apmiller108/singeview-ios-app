@@ -22,8 +22,11 @@
     
     // Create the button
     UIButton *firstButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    firstButton.frame = CGRectMake(150, 150, 100, 44);
+    firstButton.frame = CGRectMake(150, 150, 100, 40);
     firstButton.backgroundColor = [UIColor whiteColor];
+    firstButton.layer.cornerRadius = 4;
+    firstButton.layer.borderWidth = 1;
+    firstButton.layer.borderColor = [UIColor grayColor].CGColor;
     [firstButton setTitle:@"It's a Button!" forState:UIControlStateNormal];
     // Add the button to the view as a subview
     [self.view addSubview:firstButton];
