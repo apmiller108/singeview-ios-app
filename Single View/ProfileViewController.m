@@ -34,6 +34,25 @@
     [alexView setContentMode:UIViewContentModeScaleAspectFit];
     alexView.frame = CGRectMake(20, 20, 100, 114);
     [self.view addSubview:alexView];
+    
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 140, 280, 40)];
+    nameLabel.text = @"Alex Miller";
+    [self.view addSubview:nameLabel];
+    
+    UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 200, 280, 40)];
+    cityLabel.text = @"Fort Lauderdale";
+    [self.view addSubview:cityLabel];
+    
+    UITextView *biography = [[UITextView alloc] initWithFrame:CGRectMake(12, 260, 300, 180)];
+    biography.font = [UIFont fontWithName:@"helvetica" size:15];
+    biography.editable = NO;
+    biography.text = @"Plaid bespoke direct trade cardigan. Cronut sustainable vegan 90's cornhole ramps, health goth bushwick echo park disrupt direct trade lomo heirloom green juice tofu.";
+    [self.view addSubview:biography];
+    
+    UILabel *memberSinceLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 440, 280, 40)];
+    memberSinceLabel.text = @"Member Since December, 2015";
+    [self.view addSubview:memberSinceLabel];
+    
 }
 
 - (void)didReceiveMemoryWarning {
