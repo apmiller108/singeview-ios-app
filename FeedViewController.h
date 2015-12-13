@@ -6,8 +6,8 @@
 //  Copyright © 2015 alex miller. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 
-
-@interface FeedViewController : NSViewController
+@interface FeedViewController : UIViewController
 
 @end

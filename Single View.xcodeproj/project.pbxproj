@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D7CAD491C1DBB8B00A3E88E /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CAD481C1DBB8B00A3E88E /* FeedViewController.m */; };
+		8D7CAD4C1C1DBD8F00A3E88E /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CAD4B1C1DBD8F00A3E88E /* FeedViewController.m */; };
 		8DAF8B7B1C1A0630009F5F45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF8B7A1C1A0630009F5F45 /* main.m */; };
 		8DAF8B7E1C1A0631009F5F45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF8B7D1C1A0631009F5F45 /* AppDelegate.m */; };
 		8DAF8B811C1A0631009F5F45 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF8B801C1A0631009F5F45 /* ViewController.m */; };
@@ -36,8 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D7CAD471C1DBB8A00A3E88E /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
-		8D7CAD481C1DBB8B00A3E88E /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		8D7CAD4A1C1DBD8F00A3E88E /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedViewController.h; path = ../FeedViewController.h; sourceTree = "<group>"; };
+		8D7CAD4B1C1DBD8F00A3E88E /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedViewController.m; path = ../FeedViewController.m; sourceTree = "<group>"; };
 		8DAF8B761C1A0630009F5F45 /* Single View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Single View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAF8B7A1C1A0630009F5F45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DAF8B7C1C1A0631009F5F45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,10 +104,10 @@
 		8DAF8B781C1A0630009F5F45 /* Single View */ = {
 			isa = PBXGroup;
 			children = (
+				8D7CAD4A1C1DBD8F00A3E88E /* FeedViewController.h */,
+				8D7CAD4B1C1DBD8F00A3E88E /* FeedViewController.m */,
 				8DAF8B7C1C1A0631009F5F45 /* AppDelegate.h */,
 				8DAF8B7D1C1A0631009F5F45 /* AppDelegate.m */,
-				8D7CAD471C1DBB8A00A3E88E /* FeedViewController.h */,
-				8D7CAD481C1DBB8B00A3E88E /* FeedViewController.m */,
 				8DAF8B7F1C1A0631009F5F45 /* ViewController.h */,
 				8DAF8B801C1A0631009F5F45 /* ViewController.m */,
 				8DAF8B821C1A0631009F5F45 /* Main.storyboard */,
@@ -277,7 +277,7 @@
 			files = (
 				8DAF8B811C1A0631009F5F45 /* ViewController.m in Sources */,
 				8DAF8B7E1C1A0631009F5F45 /* AppDelegate.m in Sources */,
-				8D7CAD491C1DBB8B00A3E88E /* FeedViewController.m in Sources */,
+				8D7CAD4C1C1DBD8F00A3E88E /* FeedViewController.m in Sources */,
 				8DAF8B7B1C1A0630009F5F45 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

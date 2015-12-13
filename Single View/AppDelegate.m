@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "FeedViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,13 +30,7 @@
     // [self.window makeKeyAndVisible];
     
     // Feedview controller
-    UIViewController *feedViewController = [[UIViewController alloc] init];
-    // Set the controller title
-    feedViewController.title = @"Feed Me";
-    // set the controller view background color
-    feedViewController.view.backgroundColor = [UIColor blueColor];
-    // set the controller tab icon
-    feedViewController.tabBarItem.image = [UIImage imageNamed:@"feed-in"];
+    FeedViewController *feedViewController = [[FeedViewController alloc] init];
     
     // Favorites controller
     UIViewController *favoritesViewController = [[UIViewController alloc] init];
