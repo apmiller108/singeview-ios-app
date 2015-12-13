@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    UIImageView *alexView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"My_Wyncode_Mug_1000px.jpg"]];
+    [alexView setContentMode:UIViewContentModeScaleAspectFit];
+    alexView.frame = self.view.frame;
+    [self.view addSubview:alexView];
 }
 
 - (void)didReceiveMemoryWarning {
