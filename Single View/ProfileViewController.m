@@ -18,7 +18,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // set the controller tab icon
-        self.tabBarItem.image = [UIImage imageNamed:@"star"];
+        self.tabBarItem.image = [UIImage imageNamed:@"User-24"];
         // set the controller title
         self.title = @"Profile";
     }

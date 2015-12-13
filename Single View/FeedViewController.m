@@ -19,11 +19,11 @@
     // Do any additional setup after loading the view.
     
     // Set the controller title
-    self.title = @"Feed Me";
+    self.title = @"Photos";
     // set the controller view background color
     self.view.backgroundColor = [UIColor blueColor];
     // set the controller tab icon
-    self.tabBarItem.image = [UIImage imageNamed:@"feed-in"];
+    self.tabBarItem.image = [UIImage imageNamed:@"Stack of Photos-24"];
 }
 
 - (void)didReceiveMemoryWarning {
