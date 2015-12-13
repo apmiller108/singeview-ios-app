@@ -35,6 +35,7 @@
     // Set scroll view
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.contentSize = CGSizeMake(320, 680);
+    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
     // Profile Image
     UIImageView *alexView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"My_Wyncode_Mug_1000px.jpg"]];
