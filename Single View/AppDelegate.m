@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "FeedViewController.h"
+#import "FavoritesViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,13 +29,7 @@
     FeedViewController *feedViewController = [[FeedViewController alloc] init];
     
     // Favorites controller
-    UIViewController *favoritesViewController = [[UIViewController alloc] init];
-    // set the controller title
-    favoritesViewController.title = @"Favorites";
-    // set the controller view backgound color
-    favoritesViewController.view.backgroundColor = [UIColor redColor];
-    // set the controller tab icon
-    favoritesViewController.tabBarItem.image = [UIImage imageNamed:@"star"];
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     
     // The tab bar controller
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
