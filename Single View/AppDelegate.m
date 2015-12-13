@@ -30,13 +30,20 @@
     
     // Feedview controller
     UIViewController *feedViewController = [[UIViewController alloc] init];
+    // Set the controller title
     feedViewController.title = @"Feed Me";
+    // set the controller view background color
     feedViewController.view.backgroundColor = [UIColor blueColor];
+    // set the controller tab icon
     feedViewController.tabBarItem.image = [UIImage imageNamed:@"feed-in"];
+    
     // Favorites controller
     UIViewController *favoritesViewController = [[UIViewController alloc] init];
+    // set the controller title
     favoritesViewController.title = @"Favorites";
+    // set the controller view backgound color
     favoritesViewController.view.backgroundColor = [UIColor redColor];
+    // set the controller tab icon
     favoritesViewController.tabBarItem.image = [UIImage imageNamed:@"star"];
     
     // The tab bar controller
