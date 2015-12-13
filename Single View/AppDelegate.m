@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "FeedViewController.h"
 #import "FavoritesViewController.h"
+#import "ProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -31,11 +32,14 @@
     // Favorites controller
     FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     
+    // Profile controller
+    ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+    
     // The tab bar controller
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
-    [tabBarController setViewControllers:@[feedViewController, favoritesViewController]];
+    [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileVC]];
     
     NSLog(@"The screen is %f wide and %f tall", viewRect.size.width, viewRect.size.height);
     

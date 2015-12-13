@@ -14,6 +14,17 @@
 
 @implementation ProfileViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // set the controller tab icon
+        self.tabBarItem.image = [UIImage imageNamed:@"star"];
+        // set the controller title
+        self.title = @"Profile";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -21,7 +32,7 @@
     
     UIImageView *alexView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"My_Wyncode_Mug_1000px.jpg"]];
     [alexView setContentMode:UIViewContentModeScaleAspectFit];
-    alexView.frame = self.view.frame;
+    alexView.frame = CGRectMake(20, 20, 100, 114);
     [self.view addSubview:alexView];
 }
 
