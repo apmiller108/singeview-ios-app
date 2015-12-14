@@ -38,6 +38,20 @@
     [futureCity setFrame:CGRectMake(15, 100, 100, 100)];
     [self.view addSubview:futureCity];
     
+    [futureCity addTarget:self action:@selector(showZoomedPicture:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)showZoomedPicture:(UIButton *)sender {
+    UIViewController *zoomInViewController = [[UIViewController alloc] init];
+    zoomInViewController.view.frame = self.view.frame;
+    zoomInViewController.title = @"Future City";
+    
+    UIImageView *zoomPic = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"future_city_scape_2.jpg"]];
+    [zoomPic setContentMode:UIViewContentModeScaleAspectFit];
+    zoomPic.frame = zoomInViewController.view.frame;
+    [zoomInViewController.view addSubview:zoomPic];
+    
+    [self.navigationController pushViewController:zoomInViewController animated:YES];
     
 }
 
