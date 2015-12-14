@@ -31,27 +31,25 @@
     FeedViewController *feedViewController = [[FeedViewController alloc] init];
     
     // FeedTableController
-    FeedTableViewController *feedTableVC = [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    // FeedTableViewController *feedTableVC = [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
     // Favorites controller
-    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
+    // FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     
     // Profile controller
-    ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+    // ProfileViewController *profileVC = [[ProfileViewController alloc] init];
     
     // Navigation Controller
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:profileVC];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:feedViewController];
     // self.window.rootViewController = navigationController;
     
     // The tab bar controller
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    [tabBarController setViewControllers:@[navigationController, favoritesViewController, feedTableVC]];
-    self.window.rootViewController = tabBarController;
+    // UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    // [tabBarController setViewControllers:@[navigationController, favoritesViewController, feedViewController]];
+    
+    self.window.rootViewController = navigationController;
     
     [self.window makeKeyAndVisible];
-    
-
-    
 
     
     NSLog(@"The screen is %f wide and %f tall", viewRect.size.width, viewRect.size.height);

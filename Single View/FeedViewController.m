@@ -9,6 +9,7 @@
 #import "FeedViewController.h"
 #import "FavoritesViewController.h"
 #import "ProfileViewController.h"
+#import "FeedTableViewController.h"
 
 @interface FeedViewController ()
 
@@ -49,6 +50,13 @@
     [self.view addSubview:profileButton];
     [profileButton addTarget:self action:@selector(showProfile) forControlEvents:UIControlEventTouchUpInside];
     
+    // Profile Button
+    UIButton *feedTableButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    feedTableButton.frame = CGRectMake(60, 180, 200, 44);
+    [feedTableButton setTitle:@"Feed Table" forState:UIControlStateNormal];
+    [self.view addSubview:feedTableButton];
+    [feedTableButton addTarget:self action:@selector(showFeedTable) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 - (void)showFavorites {
@@ -59,6 +67,11 @@
 - (void)showProfile {
     ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
     [self.navigationController pushViewController:profileViewController animated:YES];
+}
+
+- (void)showFeedTable {
+    FeedTableViewController *feedTableVC =  [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:feedTableVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
