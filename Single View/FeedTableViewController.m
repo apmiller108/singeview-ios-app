@@ -41,6 +41,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSArray *)getCellNames {
+    return self.cellNames = @[@"Photo1", @"Photo2", @"Photo3"];
+}
+
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -48,7 +54,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+
+    return [[self getCellNames] count];
 }
 
 

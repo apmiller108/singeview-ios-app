@@ -12,5 +12,6 @@
 
 @property(nonatomic, readonly, retain) UILabel *textLabel;
 @property(nonatomic, copy) NSString *text;
+@property(nonatomic, retain) NSArray *cellNames;
 
 @end
