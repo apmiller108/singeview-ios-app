@@ -36,7 +36,7 @@
     
     // Profile Button
     UIButton *profileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    profileButton.frame = CGRectMake(60, 120, 200, 44);
+    profileButton.frame = CGRectMake(60, 140, 200, 44);
     [profileButton setTitle:@"View Profile" forState:UIControlStateNormal];
     [self.view addSubview:profileButton];
     [profileButton addTarget:self action:@selector(showProfile) forControlEvents:UIControlEventTouchUpInside];
