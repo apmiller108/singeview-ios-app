@@ -11,6 +11,7 @@
 		8D3784941C1DC78F00B0207F /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3784931C1DC78F00B0207F /* FavoritesViewController.m */; };
 		8D3784971C1E012800B0207F /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3784961C1E012800B0207F /* ProfileViewController.m */; };
 		8D3CF4A01C1F365C0029DE40 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CF49F1C1F365C0029DE40 /* FeedTableViewController.m */; };
+		8D3CF4A31C1F658D0029DE40 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CF4A21C1F658D0029DE40 /* PhotoViewController.m */; };
 		8DAF8B7B1C1A0630009F5F45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF8B7A1C1A0630009F5F45 /* main.m */; };
 		8DAF8B7E1C1A0631009F5F45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF8B7D1C1A0631009F5F45 /* AppDelegate.m */; };
 		8DAF8B811C1A0631009F5F45 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF8B801C1A0631009F5F45 /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		8D3784961C1E012800B0207F /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		8D3CF49E1C1F365C0029DE40 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		8D3CF49F1C1F365C0029DE40 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		8D3CF4A11C1F658D0029DE40 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		8D3CF4A21C1F658D0029DE40 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		8DAF8B761C1A0630009F5F45 /* Single View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Single View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAF8B7A1C1A0630009F5F45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DAF8B7C1C1A0631009F5F45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				8DAF8B7D1C1A0631009F5F45 /* AppDelegate.m */,
 				8D3CF49E1C1F365C0029DE40 /* FeedTableViewController.h */,
 				8D3CF49F1C1F365C0029DE40 /* FeedTableViewController.m */,
+				8D3CF4A11C1F658D0029DE40 /* PhotoViewController.h */,
+				8D3CF4A21C1F658D0029DE40 /* PhotoViewController.m */,
 				8D3784921C1DC78F00B0207F /* FavoritesViewController.h */,
 				8D3784931C1DC78F00B0207F /* FavoritesViewController.m */,
 				8D3784951C1E012800B0207F /* ProfileViewController.h */,
@@ -291,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3784941C1DC78F00B0207F /* FavoritesViewController.m in Sources */,
+				8D3CF4A31C1F658D0029DE40 /* PhotoViewController.m in Sources */,
 				8DAF8B811C1A0631009F5F45 /* ViewController.m in Sources */,
 				8D3784911C1DC41700B0207F /* FeedViewController.m in Sources */,
 				8D3CF4A01C1F365C0029DE40 /* FeedTableViewController.m in Sources */,

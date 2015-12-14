@@ -7,6 +7,7 @@
 //
 
 #import "FeedTableViewController.h"
+#import "PhotoViewController.h"
 
 @interface FeedTableViewController ()
 
@@ -47,6 +48,10 @@
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    PhotoViewController *photoVC = [[PhotoViewController alloc] init];
+    photoVC.imageFileName = @"future_city_scape_2.jpg";
+    
+    [self.navigationController pushViewController:photoVC animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -73,6 +78,7 @@
     
     // Configure the cell...
     cell.textLabel.text = @"Test";
+    cell.imageView.image = [UIImage imageNamed:@"future_city_scape_2.jpg"];
 
     
     return cell;
