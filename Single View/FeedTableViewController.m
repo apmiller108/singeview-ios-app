@@ -45,7 +45,9 @@
     return self.cellNames = @[@"Photo1", @"Photo2", @"Photo3"];
 }
 
-
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
 
 #pragma mark - Table view data source
 
