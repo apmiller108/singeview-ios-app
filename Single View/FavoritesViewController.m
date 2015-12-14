@@ -31,6 +31,12 @@
     
     // set the controller view backgound color
     self.view.backgroundColor = [UIColor redColor];
+    
+    UIButton *futureCity = [UIButton buttonWithType:UIButtonTypeCustom];
+    [futureCity setImage:[UIImage imageNamed:@"future_city_scape_2.jpg"] forState:UIControlStateNormal];
+    [futureCity setImage:[UIImage imageNamed:@"future_city_scape_2.jpg"] forState:UIControlStateHighlighted];
+    [futureCity setFrame:CGRectMake(15, 15, 100, 100)];
+    [self.view addSubview:futureCity];
 }
 
 - (void)didReceiveMemoryWarning {
