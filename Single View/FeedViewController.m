@@ -7,6 +7,7 @@
 //
 
 #import "FeedViewController.h"
+#import "FavoritesViewController.h"
 
 @interface FeedViewController ()
 
@@ -24,6 +25,17 @@
     self.view.backgroundColor = [UIColor blueColor];
     // set the controller tab icon
     self.tabBarItem.image = [UIImage imageNamed:@"Stack of Photos-24"];
+    // Favorites Button
+    UIButton *favoritesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    favoritesButton.frame = CGRectMake(60, 100, 200, 44);
+    [favoritesButton setTitle:@"View Favorites" forState:UIControlStateNormal];
+    [self.view addSubview:favoritesButton];
+    [favoritesButton addTarget:self action:@selector(showFavorites) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)showFavorites {
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
+    [self.navigationController pushViewController:favoritesViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
