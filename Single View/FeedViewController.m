@@ -16,16 +16,24 @@
 
 @implementation FeedViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // set the controller tab icon
+        self.tabBarItem.image = [UIImage imageNamed:@"Stack of Photos-24"];
+        // Set the controller title
+        self.title = @"Photos";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // Set the controller title
-    self.title = @"Photos";
     // set the controller view background color
     self.view.backgroundColor = [UIColor blueColor];
-    // set the controller tab icon
-    self.tabBarItem.image = [UIImage imageNamed:@"Stack of Photos-24"];
+
     
     // Favorites Button
     UIButton *favoritesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];

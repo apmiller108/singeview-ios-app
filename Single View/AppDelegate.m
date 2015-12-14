@@ -35,16 +35,18 @@
     // Profile controller
     ProfileViewController *profileVC = [[ProfileViewController alloc] init];
     
+    // Navigation Controller
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:profileVC];
+    // self.window.rootViewController = navigationController;
+    
     // The tab bar controller
-    // UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    // self.window.rootViewController = tabBarController;
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:@[navigationController, favoritesViewController, feedViewController]];
+    self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
-    // [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileVC]];
     
-    // Navigation Controller
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:feedViewController];
-    self.window.rootViewController = navigationController;
+
     
     NSLog(@"The screen is %f wide and %f tall", viewRect.size.width, viewRect.size.height);
     
