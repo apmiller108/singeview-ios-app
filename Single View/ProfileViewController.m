@@ -34,20 +34,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // background color
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    // Get JSON of random user data
     NSURL *endPoint = [[NSURL alloc] initWithString:@"https://randomuser.me/api/"];
-    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-
-    
     [manager GET:endPoint.absoluteString parameters:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", [responseObject valueForKeyPath:@"results.user.picture.medium"]);
+        NSLog(@"JSON: %@", [responseObject valueForKeyPath:@"results.user.picture.medium"][0] );
+        self.userData = responseObject;
+        [self requestSuccessful];
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
-    
-    // background color
-    self.view.backgroundColor = [UIColor yellowColor];
+}
+
+- (void)requestSuccessful {
     
     // Set scroll view
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
@@ -56,35 +58,36 @@
     
     // Profile Image
     UIImageView *profileImageView = [[UIImageView alloc] init];
-    [profileImageView setImageWithURL:[NSURL URLWithString:[userData valueForKeyPath:@"results.user.picture.medium"]] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [profileImageView setImageWithURL:[NSURL URLWithString:[self.userData valueForKeyPath:@"results.user.picture.medium"][0]] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     [profileImageView setContentMode:UIViewContentModeScaleAspectFit];
-    profileImageView.frame = CGRectMake(12, 20, 100, 114);
+    profileImageView.frame = CGRectMake(12, 80, 100, 114);
     [self.scrollView addSubview:profileImageView];
     
     // Name label
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 140, 280, 40)];
-    nameLabel.text = @"Alex Miller";
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 180, 280, 40)];
+    nameLabel.text = [self.userData valueForKeyPath:@"results.user.name.first"][0];
     [self.scrollView addSubview:nameLabel];
     
     // City label
-    UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 200, 280, 40)];
-    cityLabel.text = @"Fort Lauderdale";
+    UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 220, 280, 40)];
+    cityLabel.text = [self.userData valueForKeyPath:@"results.user.location.city"][0];
     [self.scrollView addSubview:cityLabel];
     
     // User's biography
-    UITextView *biography = [[UITextView alloc] initWithFrame:CGRectMake(12, 260, 300, 180)];
+    UITextView *biography = [[UITextView alloc] initWithFrame:CGRectMake(12, 290, 300, 180)];
     biography.font = [UIFont fontWithName:@"helvetica" size:15];
     biography.editable = NO;
     biography.text = @"Plaid bespoke direct trade cardigan. Cronut sustainable vegan 90's cornhole ramps, health goth bushwick echo park disrupt direct trade lomo heirloom green juice tofu.";
     [self.scrollView addSubview:biography];
     
     // Member since label
-    UILabel *memberSinceLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 440, 280, 40)];
+    UILabel *memberSinceLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 460, 280, 40)];
     memberSinceLabel.text = @"Member Since December, 2015";
     [self.scrollView addSubview:memberSinceLabel];
     
     [self.view addSubview:self.scrollView];
     
+
 }
 
 - (void)didReceiveMemoryWarning {
