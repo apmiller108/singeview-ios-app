@@ -38,13 +38,13 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
+
+    
     [manager GET:endPoint.absoluteString parameters:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", [responseObject valueForKeyPath:@"results.user.picture.medium"]);
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
-    
-    
     
     // background color
     self.view.backgroundColor = [UIColor yellowColor];
@@ -56,7 +56,7 @@
     
     // Profile Image
     UIImageView *profileImageView = [[UIImageView alloc] init];
-    [profileImageView setImageWithURL:[NSURL URLWithString:@"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAUCAAAAJGFhYzc5MGU1LTk0NTQtNDYzMy1iOTg4LTZiMzZkMTMzZTI3Mw.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [profileImageView setImageWithURL:[NSURL URLWithString:[userData valueForKeyPath:@"results.user.picture.medium"]] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     [profileImageView setContentMode:UIViewContentModeScaleAspectFit];
     profileImageView.frame = CGRectMake(12, 20, 100, 114);
     [self.scrollView addSubview:profileImageView];
