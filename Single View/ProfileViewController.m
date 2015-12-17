@@ -8,6 +8,9 @@
 
 #import "ProfileViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "AFURLRequestSerialization.h"
+#import "AFURLResponseSerialization.h"
+#import "AFHTTPSessionManager.h"
 
 
 @interface ProfileViewController ()
@@ -30,6 +33,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSURL *endPoint = [[NSURL alloc] initWithString:@"https://randomuser.me/api/"];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager GET:endPoint.absoluteString parameters:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", [responseObject valueForKeyPath:@"results.user.picture.medium"]);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    
     
     // background color
     self.view.backgroundColor = [UIColor yellowColor];
