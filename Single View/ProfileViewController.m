@@ -7,6 +7,8 @@
 //
 
 #import "ProfileViewController.h"
+#import "UIImageView+AFNetworking.h"
+
 
 @interface ProfileViewController ()
 
