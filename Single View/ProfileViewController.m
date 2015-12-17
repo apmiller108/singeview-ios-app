@@ -40,10 +40,11 @@
     self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
     // Profile Image
-    UIImageView *alexView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"My_Wyncode_Mug_1000px.jpg"]];
-    [alexView setContentMode:UIViewContentModeScaleAspectFit];
-    alexView.frame = CGRectMake(12, 20, 100, 114);
-    [self.scrollView addSubview:alexView];
+    UIImageView *profileImageView = [[UIImageView alloc] init];
+    [profileImageView setImageWithURL:[NSURL URLWithString:@"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAUCAAAAJGFhYzc5MGU1LTk0NTQtNDYzMy1iOTg4LTZiMzZkMTMzZTI3Mw.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [profileImageView setContentMode:UIViewContentModeScaleAspectFit];
+    profileImageView.frame = CGRectMake(12, 20, 100, 114);
+    [self.scrollView addSubview:profileImageView];
     
     // Name label
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 140, 280, 40)];
