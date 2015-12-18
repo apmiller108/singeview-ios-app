@@ -106,11 +106,17 @@
     self.notesField.frame = CGRectMake(20, 520, 280, 40);
     self.notesField.borderStyle = UITextBorderStyleBezel;
     self.notesField.backgroundColor = [UIColor whiteColor];
+    self.notesField.delegate = self;
     [self.scrollView addSubview:self.notesField];
     
     [self.view addSubview:self.scrollView];
     
+}
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    self.profile.notes = self.notesField.text;
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

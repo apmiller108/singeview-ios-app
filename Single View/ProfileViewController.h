@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Profile.h"
 
-@interface ProfileViewController : UIViewController
+@interface ProfileViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) UILabel *notesLabel;
 @property (strong, nonatomic) UITextField *notesField;
