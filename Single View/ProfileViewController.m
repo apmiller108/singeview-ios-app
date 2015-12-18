@@ -56,21 +56,27 @@
     self.scrollView.contentSize = CGSizeMake(320, 680);
     self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
+    // Create profile and set the profile attributes
+    self.profile = [[Profile alloc] init];
+    self.profile.name = [self.userData valueForKeyPath:@"results.user.name.first"][0];
+    self.profile.city = [self.userData valueForKeyPath:@"results.user.location.city"][0];
+    self.profile.mediumPhoto = [self.userData valueForKeyPath:@"results.user.picture.medium"][0];
+    
     // Profile Image
     UIImageView *profileImageView = [[UIImageView alloc] init];
-    [profileImageView setImageWithURL:[NSURL URLWithString:[self.userData valueForKeyPath:@"results.user.picture.medium"][0]] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [profileImageView setImageWithURL:[NSURL URLWithString:self.profile.mediumPhoto]];
     [profileImageView setContentMode:UIViewContentModeScaleAspectFit];
     profileImageView.frame = CGRectMake(12, 80, 100, 114);
     [self.scrollView addSubview:profileImageView];
     
     // Name label
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 180, 280, 40)];
-    nameLabel.text = [self.userData valueForKeyPath:@"results.user.name.first"][0];
+    nameLabel.text = self.profile.name;
     [self.scrollView addSubview:nameLabel];
     
     // City label
     UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 220, 280, 40)];
-    cityLabel.text = [self.userData valueForKeyPath:@"results.user.location.city"][0];
+    cityLabel.text = self.profile.city;
     [self.scrollView addSubview:cityLabel];
     
     // User's biography

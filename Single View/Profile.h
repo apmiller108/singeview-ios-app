@@ -10,7 +10,6 @@
 
 @interface Profile : NSObject
 
-@property (strong, nonatomic) NSDictionary *userData;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *mediumPhoto;

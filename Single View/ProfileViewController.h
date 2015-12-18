@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Profile.h"
 
 @interface ProfileViewController : UIViewController
 
+@property (strong, nonatomic) NSDictionary *userData;
 @property (strong, nonatomic) UIScrollView *scrollView;
+@property (strong, nonatomic) Profile *profile;
 
 
 @end
