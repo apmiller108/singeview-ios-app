@@ -85,6 +85,8 @@
     biography.font = [UIFont fontWithName:@"helvetica" size:15];
     biography.editable = NO;
     biography.text = @"Plaid bespoke direct trade cardigan. Cronut sustainable vegan 90's cornhole ramps, health goth bushwick echo park disrupt direct trade lomo heirloom green juice tofu.";
+    biography.layer.borderWidth = 3.0f;
+    biography.layer.borderColor = [[UIColor grayColor] CGColor];
     [self.scrollView addSubview:biography];
     
     // Member since label
@@ -100,7 +102,9 @@
     
     // notes text field
     self.notesField = [[UITextField alloc] init];
+    self.notesField.keyboardType = UIKeyboardTypeDefault;
     self.notesField.frame = CGRectMake(20, 520, 280, 40);
+    self.notesField.borderStyle = UITextBorderStyleBezel;
     self.notesField.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:self.notesField];
     
