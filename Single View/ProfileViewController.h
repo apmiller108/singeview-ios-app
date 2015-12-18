@@ -11,6 +11,8 @@
 
 @interface ProfileViewController : UIViewController
 
+@property (strong, nonatomic) UILabel *notesLabel;
+@property (strong, nonatomic) UITextField *notesField;
 @property (strong, nonatomic) NSDictionary *userData;
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong, nonatomic) Profile *profile;

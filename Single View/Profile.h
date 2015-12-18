@@ -13,5 +13,6 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *mediumPhoto;
+@property (strong, nonatomic) NSString *notes;
 
 @end

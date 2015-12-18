@@ -41,7 +41,7 @@
     NSURL *endPoint = [[NSURL alloc] initWithString:@"https://randomuser.me/api/"];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:endPoint.absoluteString parameters:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", [responseObject valueForKeyPath:@"results.user.picture.medium"][0] );
+        NSLog(@"JSON: %@", responseObject);
         self.userData = responseObject;
         [self requestSuccessful];
     } failure:^(NSURLSessionTask *operation, NSError *error) {
@@ -61,6 +61,7 @@
     self.profile.name = [self.userData valueForKeyPath:@"results.user.name.first"][0];
     self.profile.city = [self.userData valueForKeyPath:@"results.user.location.city"][0];
     self.profile.mediumPhoto = [self.userData valueForKeyPath:@"results.user.picture.medium"][0];
+    self.profile.notes = @"Notes";
     
     // Profile Image
     UIImageView *profileImageView = [[UIImageView alloc] init];
@@ -90,6 +91,18 @@
     UILabel *memberSinceLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 460, 280, 40)];
     memberSinceLabel.text = @"Member Since December, 2015";
     [self.scrollView addSubview:memberSinceLabel];
+    
+    // notes label
+    self.notesLabel = [[UILabel alloc] init];
+    self.notesLabel.frame = CGRectMake(20, 480, 280, 40);
+    self.notesLabel.text = self.profile.notes;
+    [self.scrollView addSubview:self.notesLabel];
+    
+    // notes text field
+    self.notesField = [[UITextField alloc] init];
+    self.notesField.frame = CGRectMake(20, 520, 280, 40);
+    self.notesField.backgroundColor = [UIColor whiteColor];
+    [self.scrollView addSubview:self.notesField];
     
     [self.view addSubview:self.scrollView];
     
